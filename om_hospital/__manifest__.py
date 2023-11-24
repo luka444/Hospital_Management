@@ -5,7 +5,9 @@
     'depends': [],
     'category': 'Hospital',
     'description': """Hospital management system""",
-    'data':[],
+    'data':[
+        'views/menu.xml',
+    ],
     'application': True,
     'auto_install': False,
     'license': 'LGPL-3',
