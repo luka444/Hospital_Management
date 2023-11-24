@@ -7,6 +7,7 @@
     'description': """Hospital management system""",
     'data':[
         'views/menu.xml',
+        'views/patient_view.xml',
     ],
     'application': True,
     'auto_install': False,
