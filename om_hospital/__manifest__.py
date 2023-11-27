@@ -6,6 +6,7 @@
     'category': 'Hospital',
     'description': """Hospital management system""",
     'data':[
+        'security/ir.model.access.csv',
         'views/menu.xml',
         'views/patient_view.xml',
     ],
