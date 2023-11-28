@@ -28,6 +28,7 @@
                         <group>
                             <field name="reference"/>
                             <field name="gender"/>
+                            <field name="active" invisible="1"/>
                         </group>  
                     </group>
                 </sheet>
@@ -48,6 +49,8 @@
                 <filter name="filter_male" string="Male" domain="[('gender', '=', 'male')]"/>
                 <separator />
                 <filter name="filter_kids" string="Kids" domain="[('age', '&lt;=', 5)]"/>
+                <separator />
+                <filter name="filter_archived" string="Archived" domain="[('active', '=', False)]"/>
                 <group expand="0" string="Group by">
                     <filter string="Gender" name="group_by_gender" context="{'group_by': 'gender'}"/>
                 </group>
