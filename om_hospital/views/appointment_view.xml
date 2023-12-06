@@ -9,6 +9,8 @@
                     <group>
                         <field name="name"/>
                         <field name="patient_id"/>
+                        <field name="appointment_time"/>
+                        <field name="booking_date"/>
                     </group>
                 </sheet>
                 <div class="oe_chatter">
@@ -38,7 +40,7 @@
     </record>
 
      <menuitem id="menu_appointment"
-              name="Appointment"
+              name="Appointments"
               action="action_hospital_appointment"
               parent="menu_hospital_root"
               sequence="10"/>
