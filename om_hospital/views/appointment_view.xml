@@ -10,15 +10,14 @@
                         <group>
                             <field name="name"/>
                             <field name="patient_id"/>
+                            <field name="gender"/>
                             <field name="reference"/>
                             <field name="appointment_time"/>
                         </group>
                     </group>
                     <notebook>
-                        <page string="Prescription" name="prescription">
-                            <group>
-                                <field name="gender"/>
-                            </group>
+                        <page string="Prescription" name="prescription">                       
+                             <field name="prescription" placeholder="Enter your prescription"/>
                         </page>
                         <page string="Pharmacy" name="pharmacy">
                             <group>
