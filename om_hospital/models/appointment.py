@@ -1,4 +1,4 @@
-from odoo import fields, models
+from odoo import api, fields, models
 
 
 class HospitalAppointment(models.Model):
@@ -8,7 +8,12 @@ class HospitalAppointment(models.Model):
 
     name = fields.Char()
     patient_id = fields.Many2one("hospital.patient", string="Patient")
+    reference = fields.Char(string="Reference")
     gender = fields.Selection(string='Gender', related="patient_id.gender")
     appointment_time = fields.Datetime(string="Appointment Time", default=fields.Datetime.now)
     booking_date = fields.Date(string="Booking Date", default=fields.Date.context_today)
     
+    @api.onchange("patient_id")
+    def onchange_patient_id(self):
+        self.reference = self.patient_id.reference
+        
