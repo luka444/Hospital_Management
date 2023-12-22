@@ -6,6 +6,11 @@
         <field name="arch" type="xml">
             <form create="0" delete="0" copy="0">
                 <sheet>
+                    <div class="d-flex">
+                        <h1>
+                            <field name="priority" widget="priority" class="me-3"/>
+                        </h1>
+                    </div>
                     <group>
                         <group>
                             <field name="name"/>
