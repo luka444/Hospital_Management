@@ -56,7 +56,7 @@
         <field name="name">hospital.appointment.view.tree</field>
         <field name="model">hospital.appointment</field>
         <field name="arch" type="xml">
-            <tree>
+            <tree decoration-success="state == 'done'" decoration-danger="state == 'cancel'" decoration-warning="state == 'in_consultation'" decoration-info="state == 'draft'">
                 <field name="name"/>
                 <field name="appointment_time"/>
                 <field name="booking_date"/>
