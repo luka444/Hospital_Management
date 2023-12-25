@@ -60,6 +60,12 @@
                 <field name="name"/>
                 <field name="appointment_time"/>
                 <field name="booking_date"/>
+                <field name="state" 
+                    decoration-success="state == 'done'"
+                    decoration-info="state == 'draft'"
+                    decoration-warning="state == 'in_consultation'"
+                    decoration-danger="state == 'cancel'"
+                    widget="badge"/>
             </tree>
         </field>
     </record>
