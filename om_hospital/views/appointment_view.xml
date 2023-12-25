@@ -16,18 +16,20 @@
                         </h1>
                     </div>
                     <group>
+                        <field name="name" placeholder="Enter Appointment Name" style="font-size: 25px;"/>
                         <group>
-                            <field name="name"/>
                             <field name="patient_id"/>
                             <field name="gender"/>
                             <field name="reference"/>
                             <field name="appointment_time"/>
                         </group>
                         <group>
-                            <button name="action_test" string="Object button" type="object" class="oe_highlight"/>
+                            <button name="action_test" string="Object button" type="object" 
+                            class="oe_highlight" help="A message will be printed in the log"/>
                             <separator />
                             <button name="%(om_hospital.action_hospital_patient)d" string="Action button" type="action" 
-                                confirm="Are you sure to open the patient action ?" class="oe_highlight"/>
+                                confirm="Are you sure to open the patient action ?" class="oe_highlight"
+                                help="On clicking this button you will be redirected to patient records"/>
                         </group>
                     </group>
                     <notebook>

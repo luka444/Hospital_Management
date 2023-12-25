@@ -25,11 +25,12 @@
                             <field name="name"/>
                             <field name="date_of_birth"/>
                             <field name="age"/>
-                            <field name="appointment_id"/>
+                            <field name="gender"/>
+                            
                         </group>
                         <group>
                             <field name="reference"/>
-                            <field name="gender"/>
+                            <field name="appointment_id"/>
                             <field name="active" invisible="1"/>
                         </group>  
                     </group>
