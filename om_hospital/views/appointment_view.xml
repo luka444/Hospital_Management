@@ -27,6 +27,7 @@
                             <field name="reference"/>
                             <field name="doctor_id" widget="many2one_avatar"/>
                             <field name="appointment_time"/>
+                            <field name="booking_date" default_focus="1"/>
                         </group>
                         <group>
                             <button name="action_test" string="Object button" type="object" 
@@ -42,10 +43,21 @@
                              <field name="prescription" placeholder="Enter your prescription"
                              options="{'collaborative': true, 'resizable': true}"/>
                         </page>
-                        <page string="Pharmacy" name="pharmacy">
-                            <group>
-                                <field name="booking_date" default_focus="1"/>
-                            </group>
+                        <page string="Pharmacy" name="pharmacy">  
+                            <field name="pharmacy_line_ids">
+                                <tree>
+                                    <field name="product_id"/>
+                                    <field name="qty"/>
+                                    <field name="price_unit"/>
+                                </tree>
+                                <form>
+                                    <group>
+                                        <field name="product_id"/>
+                                        <field name="qty"/>
+                                        <field name="price_unit"/>
+                                    </group>
+                                </form>
+                            </field>
                         </page>
                     </notebook>
                 </sheet>

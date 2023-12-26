@@ -27,6 +27,7 @@ class HospitalAppointment(models.Model):
             ("done", "Done"),
             ("cancel", "Cancelled")], default="draft", string="Status", required=True)
     doctor_id = fields.Many2one("res.users", string="Doctor")
+    pharmacy_line_ids = fields.One2many("appointment.pharmacy.lines", "appointment_id", string="Pharmacy Lines")
     
     @api.onchange("patient_id")
     def onchange_patient_id(self):
@@ -58,4 +59,3 @@ class HospitalAppointment(models.Model):
     def action_draft(self):
         for rec in self:
             rec.state = "draft"
-            

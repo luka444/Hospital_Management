@@ -2,7 +2,7 @@
     'name': 'Hospital Management',
     'version':'1.0.0',
     'sequence': -100,
-    'depends': ['mail'],
+    'depends': ['mail', 'product'],
     'category': 'Hospital',
     'description': """Hospital management system""",
     'data':[
