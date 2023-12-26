@@ -40,7 +40,7 @@
                         </page>
                         <page string="Pharmacy" name="pharmacy">
                             <group>
-                                <field name="booking_date"/>
+                                <field name="booking_date" default_focus="1"/>
                             </group>
                         </page>
                     </notebook>
