@@ -6,7 +6,11 @@
         <field name="arch" type="xml">
             <form create="0" delete="0" copy="0">
                 <header>
-                     <field name="state" widget="statusbar" nolabel="1" options="{'clickable': '1'}"
+                    <button name="action_in_consultation" string="In Consultation" type="object" states="draft"/>
+                    <button name="action_done" string="Mark as done" type="object" states="in_consultation"/>
+                    <button name="action_canel" string="Cancel" type="object" states="draft,in_consultation"/>
+                    <button name="action_draft" string="Reset to draft" type="object" states="cancel"/>
+                    <field name="state" widget="statusbar" nolabel="1" 
                         statusbar_visible="draft,in_consultation,done"/>
                 </header>
                 <sheet>
