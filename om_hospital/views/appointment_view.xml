@@ -58,7 +58,8 @@
         <field name="name">hospital.appointment.view.tree</field>
         <field name="model">hospital.appointment</field>
         <field name="arch" type="xml">
-            <tree decoration-success="state == 'done'" decoration-danger="state == 'cancel'" decoration-warning="state == 'in_consultation'" decoration-info="state == 'draft'" sample="1">
+            <tree decoration-success="state == 'done'" decoration-danger="state == 'cancel'" 
+            decoration-warning="state == 'in_consultation'" decoration-info="state == 'draft'" sample="1" multi_edit="1">
                 <field name="name"/>
                 <field name="patient_id"/>
                 <field name="gender" optional="hide"/>
