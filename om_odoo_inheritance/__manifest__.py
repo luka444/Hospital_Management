@@ -6,6 +6,7 @@
     'category': 'om odoo inheritance',
     'description': """""",
     'data':[
+        'views/sale_order_view.xml',
     ],
     'application': True,
     'auto_install': False,
