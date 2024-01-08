@@ -29,6 +29,7 @@
                     <button name="action_in_consultation" string="In Consultation" type="object" states="draft"/>
                     <button name="action_done" string="Mark as done" type="object" states="in_consultation" data-hotkey="v"/>
                     <button name="action_canel" string="Cancel" type="object" states="draft,in_consultation"/>
+                    <!-- <button name="%(om_hospital.cancel_appointment_wizard_action)d" string="Cancel" type="action" states="draft,in_consultation"/> -->
                     <button name="action_draft" string="Reset to draft" type="object" states="cancel" data-hotkey="z"/>
                     <field name="state" widget="statusbar" nolabel="1" 
                         statusbar_visible="draft,in_consultation,done"/>
@@ -127,10 +128,12 @@
         <field name="view_mode">tree,form,activity</field>
     </record>
 
-     <menuitem id="menu_appointment"
+    
+
+    <menuitem id="menu_appointment"
               name="Appointments"
               action="action_hospital_appointment"
-              parent="menu_hospital_root"
+              parent="menu_appointment_main"
               sequence="10"/>
 
 </odoo>

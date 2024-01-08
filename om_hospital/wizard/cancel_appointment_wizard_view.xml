@@ -28,9 +28,14 @@
         <field name="target">new</field>
     </record>
 
+   <menuitem id="menu_appointment_main"
+              name="Appointments"
+              parent="menu_hospital_root"
+              sequence="10"/>
+
     <menuitem id="menu_cancel_appointment_wizard"
               name="Cancellation"
-              parent="menu_appointment"
+              parent="menu_appointment_main"
               action="cancel_appointment_wizard_action"
               sequence="10"/>
 </odoo>
