@@ -48,16 +48,20 @@
                                 <tree editable="bottom">
                                     <field name="product_id"/>
                                     <field name="qty"/>
-                                    <field name="price_unit"/>
+                                    <field name="price_unit" attrs="{'column_invisible': [('parent.hide_sales_price', '=', True)]}"/>
                                 </tree>
                                 <form>
                                     <group>
                                         <field name="product_id"/>
                                         <field name="qty"/>
-                                        <field name="price_unit"/>
+                                        <field name="price_unit"
+                                            attrs="{'column_invisible': [('parent.hide_sales_price', '=', True)]}"/>
                                     </group>
                                 </form>
                             </field>
+                            <group>
+                                <field name="hide_sales_price"/>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>
