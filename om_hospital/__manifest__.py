@@ -7,6 +7,7 @@
     'description': """Hospital management system""",
     'data':[
         'security/ir.model.access.csv',
+        'wizard/cancel_appointment_wizard_view.xml',
         'views/menu.xml',
         'views/patient_view.xml',
         'views/female_patient_view.xml',
