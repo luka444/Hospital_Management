@@ -26,7 +26,7 @@
                             <field name="name"/>
                             <field name="date_of_birth"/>
                             <field name="age"/>
-                            <field name="gender"/>
+                            <field name="gender" invisible="context.get('hide_gender')"/>
                         </group>
                         <group>
                             <field name="reference"/>
