@@ -30,9 +30,15 @@ class HospitalAppointment(models.Model):
     pharmacy_line_ids = fields.One2many("appointment.pharmacy.lines", "appointment_id", string="Pharmacy Lines")
     hide_sales_price = fields.Boolean(string="Hide Sales Price")
     
-    @api.onchange("patient_id")
-    def onchange_patient_id(self):
-        self.reference = self.patient_id.reference
+    @api.model
+    def create(self, vals):
+        vals["reference"] = self.env['ir.sequence'].next_by_code('hospital.appointment')
+        return super(HospitalAppointment, self).create(vals)
+
+    def write(self, vals):
+        if not self.reference and not vals.get("reference"):
+            vals["reference"] =  self.env['ir.sequence'].next_by_code('hospital.appointment')
+        return super(HospitalAppointment, self).write(vals)
 
     def action_test(self):
         print("Button clicked !!!!!!!")
