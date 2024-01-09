@@ -16,7 +16,7 @@
                     </group>         
                 </group>
                 <footer>
-                    <button name="action_cancel" data-hotkey="q" string="Cancel" class="btn-primary" type="object"/>
+                    <button name="action_cancel" data-hotkey="q" string="Cancel Appointment" class="btn-primary" type="object"/>
                     <button special="cancel" data-hotkey="z" string="Dichard" class="btn-secondary"/>
                 </footer>
             </form>
